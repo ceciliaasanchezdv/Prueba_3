@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <form method="POST" class="form">
+    <h2 class="form-title">Formulario de Nombres</h2>
+
+    <label for="nombre1">Nombre 1:</label>
+    <input id="nombre1" name="nombre1" type="text" required>
+
+    <label for="nombre2">Nombre 2:</label>
+    <input id="nombre2" name="nombre2" type="text" required>
+
+    <label for="nombre3">Nombre 3:</label>
+    <input id="nombre3" name="nombre3" type="text" required>
+
+    <button type="submit" class="btn-enviar">Enviar</button>
+
+      <a href="{{ url_for('index') }}" class="btn-volver">Volver</a>
+
+      <p>{{ resultado|safe }}</p>
+
+  </form>
+</body>
+</html>
